@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TypeScript with RequireJS</title>
+</head>
+<body>
+    <div>
+        <h1>TypeScript with RequireJS loading jQuery in Visual Studio land with server driven urlArgs</h1>
+    </div>
+
+    <!-- use jquery to load this message-->
+    <p id="message"></p>
+
+    <!-- Shortcut to load require and then load main-->
+    <script src="/scripts/require.js"></script>
+    <script>
+        require.config({
+            baseUrl: "/scripts",
+            paths: {
+                "jquery": "jquery-2.1.0"
+            },
+            urlArgs: "v=@RequireJSandCaching.RequireJSHelpers.Version"
+        });
+
+        require(["alerter"], function (alerter) {
+            alerter.showMessage();
+        });
+    </script>
+</body>
+</html>
