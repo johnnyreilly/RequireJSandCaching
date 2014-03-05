@@ -61,7 +61,6 @@
   <ItemGroup>
     <None Include="serverUrlArgs.cshtml" />
     <Content Include="packages.config" />
-    <Content Include="cacheBust.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
